@@ -15,5 +15,10 @@ Examples
 */
 
 function primeFactors(n) {
-	return [];
+    let result = [];
+    for (let divisor = 2; divisor <= n; divisor++) {
+        for (; 0 === n % divisor; n /= divisor) {
+            result.push(divisor)
+        }
+    } return result
 }
