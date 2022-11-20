@@ -18,3 +18,10 @@ String.prototype.capitalize = function() {
     }
     return String.fromCharCode(code) + this.slice(1)
   }
+
+String.prototype.capitalize = function () {
+    const findFirstLetter = this.replace(/^[a-z]/, item =>
+      String.fromCodePoint(this.charCodeAt(0) - 32),
+    );
+    return findFirstLetter;
+  };
