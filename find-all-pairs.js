@@ -9,10 +9,10 @@ Examples
 ...because there are 2 pairs: 2 and 5
 [1, 2, 2, 20, 6, 20, 2, 6, 2]  -->  4
 ...because there are 4 pairs: 2, 20, 6 and 2 (again)
-*/
 
-// we create a new array - for each number we check if that number is in the array
-// if not we put in in there, if it is we remove it and count a pair
+we create a new array - for each number we check if that number is in the array
+if not we put in in there, if it is we remove it and count a pair */
+
 function duplicates(array) {
 	let double = []
 	let pairs = 0
