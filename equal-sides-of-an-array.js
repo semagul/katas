@@ -28,4 +28,20 @@ Note:
 If you are given an array with multiple answers, return the lowest correct index. */
 
 
+function findEvenIndex(arr) {
+    return arr.findIndex((_, i) => {
+        return checkEquality(arr.slice(0, i), arr.slice(i + 1));
+    })
+}
 
+function checkEquality(before, after) {
+    return sum(before) === sum(after);
+}
+
+function sum(array) {
+    let acc = 0;
+    array.forEach((item) => {
+        acc += item;
+    })
+    return acc;
+}
