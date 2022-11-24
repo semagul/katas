@@ -8,3 +8,16 @@ function squareDigits(num) {
   return Number(
     num.toString().split('').map(elem => elem * elem).join(''))
 }
+
+// solution II
+
+function squareDigits(num) {
+  let result = num
+    .toString()
+    .split("")
+    .map(num => parseInt(num))
+    .map(num => num * num)
+    .join("")
+
+  return parseInt(result)
+}
