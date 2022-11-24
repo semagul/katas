@@ -11,17 +11,25 @@ JavaScript / CoffeeScript: Extend the String prototype with a method capitalize(
 
 Furthermore, the built-in string methods toUpperCase() and toLowerCase() are disabled for this Kata. */
 
-String.prototype.capitalize = function() {
-    let code = this.charCodeAt(0)
-    if (code > 96 && code < 122) {
-      code -= 32
-    }
-    return String.fromCharCode(code) + this.slice(1)
+String.prototype.capitalize = function () {
+  let code = this.charCodeAt(0)
+  if (code > 96 && code < 122) {
+    code -= 32
   }
+  return String.fromCharCode(code) + this.slice(1)
+}
+
+// solution II
 
 String.prototype.capitalize = function () {
-    const findFirstLetter = this.replace(/^[a-z]/, item =>
-      String.fromCodePoint(this.charCodeAt(0) - 32),
-    );
-    return findFirstLetter;
-  };
+  const findFirstLetter = this.replace(/^[a-z]/, item =>
+    String.fromCodePoint(this.charCodeAt(0) - 32),
+  )
+  return findFirstLetter;
+}
+
+// solution III
+
+String.prototype.capitalize = function () {
+  return this.replace(/^[a-z]/, val => String.fromCharCode(val.charCodeAt(0) - 32));
+}
