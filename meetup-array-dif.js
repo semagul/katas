@@ -16,6 +16,12 @@ function arrayDiff(array1, array2) {
     array1.forEach(function included(element) {
         if (!array2.includes(element)) { returnArray.push(element) }
     })
-    
+
     return returnArray;
+}
+
+// solution II
+
+function array_diff(a, b) {
+    return a.filter(e => !b.includes(e));
 }
