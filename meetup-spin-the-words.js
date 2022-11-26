@@ -11,3 +11,9 @@ function spinWords(string) {
         function (w) { return w.split('').reverse().join('') }
     )
 }
+
+// solution II
+
+function spinWords(words) {
+    return words.split(' ').map(w => w.length < 5 ? w : w.split('').reverse().join('')).join(' ');
+}
