@@ -23,3 +23,9 @@ function findOdd(arr) {
 // solution II
 
 const findOdd = (xs) => xs.reduce((a, b) => a ^ b)
+
+// solution II
+
+function findOdd(arr) {
+    return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+}
